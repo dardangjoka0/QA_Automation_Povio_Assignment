@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "html:target/default-html-reports"},
         features = "src/test/resources/features",
         glue = "com/povio/step_definiton",
-        dryRun = true,
-        tags = "@health",
+        dryRun = false,
+        tags = "@signin",
         publish = true
 
 )
