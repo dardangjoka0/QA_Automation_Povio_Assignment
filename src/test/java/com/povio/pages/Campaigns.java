@@ -34,20 +34,20 @@ public class Campaigns {
     WebElement createButton;
     @FindBy(xpath = "//tbody//a[contains(text(), 'Edit')]")
     public List<WebElement> edit;
-    private  int count=edit.size()+1;
+    private static int count=1;
     private int id;
     @FindBy(xpath = "//tbody//a[contains(text(), 'Destroy')]")
     public List<WebElement> destroy;
     @FindBy(id = "flash_notice")
     WebElement flag;
 
-    public boolean addNewCampaign(String name, String description, String campaingType){
-       addNewCampaignButton.click();
-      if(Driver.getDriver().getTitle().contains(endpoint)){
+    public void addNewCampaign(String name, String description, String campaingType){
+       //addNewCampaignButton.click();
+
 
             nameInput.sendKeys(name);
             descriptionInput.sendKeys(description);
-            if(campaingType.contains("One time"))
+            if(campaingType.contains("O"))
                 radioB.get(0).click();
             else
                 radioB.get(1).click();
@@ -55,19 +55,17 @@ public class Campaigns {
             createButton.click();
           count++;
           id=count;
-          return true;
 
-      }
 
-      else
-           return false;
+
+
 
     }
-    public void editCampaign(int id, String name, String description, String type){
-        String xpath="("+"//tbody//a[contains(text(), 'Edit')]"+")["+id+"]";
-        edit.get(id).click();
-        nameInput.sendKeys(name);
-        descriptionInput.sendKeys(description);
+    public void editCampaign( String name, String description, String type){
+//        String xpath="("+"//tbody//a[contains(text(), 'Edit')]"+")["+id+"]";
+         // edit.get(id).click();
+         nameInput.sendKeys(name);
+         descriptionInput.sendKeys(description);
         if(type.contains("One time"))
             radioB.get(0).click();
         else

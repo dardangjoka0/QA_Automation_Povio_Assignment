@@ -22,7 +22,7 @@ public class SignIn extends BasePage {
     @FindBy(name = "commit")
     WebElement signInButton;
 
-    public void signMeIN(String user, String password, boolean rememberMe) throws InterruptedException {
+    public void signMeIN(String user, String password, boolean rememberMe)  {
 
 
         email.sendKeys(user);

@@ -21,6 +21,10 @@ public class BasePage {
     public WebElement editAccount;
     @FindBy(xpath = "(//input[@type='submit'])[2]")
     public WebElement cancelAacc;
+    @FindBy(id="flash_notice")
+    public WebElement flag;
+    @FindBy(linkText = "Campaigns")
+    public WebElement campaign;
 
 
 }

@@ -12,7 +12,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/povio/step_definiton",
         dryRun = true,
-        tags = "@wip"
+        tags = "@deleteacc",
+        publish = true
 
 )
 public class CukesRunner {
