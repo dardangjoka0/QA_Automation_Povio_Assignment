@@ -2,7 +2,7 @@ package com.povio.pages;
 
 import com.povio.helper.ConfigurationReader;
 import com.povio.helper.Driver;
-import jdk.internal.jimage.ImageReader;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

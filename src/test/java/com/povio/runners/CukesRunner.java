@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/povio/step_definiton",
         dryRun = true,
-        tags = "@deleteacc",
+        tags = "@health",
         publish = true
 
 )
